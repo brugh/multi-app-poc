@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run start:win",
-    "start:win": "start ng serve & ng serve login --port 4201",
+    "start:login": "ng serve login --port 4201",
+    "start:addin": "ng serve addin --ssl true --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
+    "start:win": "start npm run start:addin & npm run start:login",
+    "start:lin": "npm run start:addin & npm run start:login",
     "build": "ng build && ng build login",
     "test": "ng test",
     "lint": "ng lint",
