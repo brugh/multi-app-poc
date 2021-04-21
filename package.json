@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run start:win",
-    "start:login": "ng serve login --port 4201",
+    "start:login": "ng serve login --port 4201 --ssl true --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
     "start:addin": "ng serve addin --ssl true --ssl-key ssl/localhost.key --ssl-cert ssl/localhost.crt",
-    "start:win": "start npm run start:addin & npm run start:login",
-    "start:lin": "npm run start:addin & npm run start:login",
+    "start:win": "start npm run start:login & npm run start:addin",
+    "start:lin": "npm run start:login & npm run start:addin",
     "build": "ng build && ng build login",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,7 +25,7 @@
     "@angular/router": "~11.2.10",
     "@azure/msal-angular": "^2.0.0-beta.4",
     "@azure/msal-browser": "^2.14.0",
-    "rxjs": "~6.6.0",
+    "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },

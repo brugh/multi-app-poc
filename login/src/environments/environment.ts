@@ -10,7 +10,7 @@ export const msal = {
   clientId: '0c7de0ec-997a-454f-8baf-f380c7f40a70', // Herco
   // clientId: 'd546910f-3735-4ab3-831e-bf7426d4c513', // Lieuwe
   authority: 'https://login.microsoftonline.com/common/',
-  redirectUri: 'http://localhost:4201',
+  redirectUri: 'https://localhost:4201',
   scopes: ['Files.ReadWrite.All', 'Sites.Read.All', 'User.Read']
 };
 
