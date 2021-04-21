@@ -12,7 +12,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       clientId: msal.clientId,
-      // authority: environment.msal.authority,
+      authority: msal.authority,
       redirectUri: msal.redirectUri,
       // postLogoutRedirectUri: '/',
       // navigateToLoginRequestUrl: true,
@@ -28,11 +28,6 @@ export function MSALInstanceFactory(): IPublicClientApplication {
       //   logLevel: LogLevel.Error,
       //   piiLoggingEnabled: false
       // },
-      tokenRenewalOffsetSeconds: 300,
-      navigateFrameWait: 1000,
-      // windowHashTimeout: 60000,
-      // iframeHashTimeout: 6000,
-      // loadFrameTimeout: 0
     },
   });
 }

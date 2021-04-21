@@ -19,7 +19,7 @@ export class AppComponent {
       // If response is non-null, it means page is returning from AAD with a successful response
       if (response) {
         this.message = `Logged in succesfully as ${response?.account?.name}. Please close this window.`;
-        Office.context.ui.messageParent(JSON.stringify({ status: 'success', result: response.accessToken }));
+        Office.context.ui.messageParent(JSON.stringify({ status: 'success', result: JSON.stringify(response)}));
       } else {
         // Otherwise, invoke login
         this.msalService.loginRedirect({ scopes: msal.scopes });

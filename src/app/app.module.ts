@@ -18,7 +18,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
       clientId: msal.clientId,
     },
     cache: {
-      cacheLocation: BrowserCacheLocation.LocalStorage,
+      cacheLocation: 'localStorage', //BrowserCacheLocation.LocalStorage,
       storeAuthStateInCookie: isIE,
     },
   });
