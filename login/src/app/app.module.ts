@@ -28,6 +28,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
       //   logLevel: LogLevel.Error,
       //   piiLoggingEnabled: false
       // },
+      iframeHashTimeout: 10000
     },
   });
 }

@@ -9,7 +9,4 @@ import { MsalService } from '@azure/msal-angular';
   styles: []
 })
 export class AppComponent {
-  constructor(private msalService: MsalService) {
-    
-  }
 }
